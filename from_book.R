@@ -98,5 +98,19 @@ from_book_control <- function(){
 }
 
 function_book_functions <- function() {
+    myplot <- function(x,y,type="l",...){
+        plot(x,y,type=type,...) ## pass '...' to plot function
+    }
     
+    make.power <- function(n) {
+        pow <- function(x) {
+            x^n
+        }
+        pow
+    }
+    cube <- make.power(3)
+    square <- make.power(2)
+    cube(3)
+    square(3)
+    ls(environment(cube))
 }
